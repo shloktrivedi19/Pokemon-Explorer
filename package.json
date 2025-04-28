@@ -1,6 +1,5 @@
 {
   "name": "poke-explorer",
-  "homepage": "https://shloktrivedi19.github.io/Pokemon-Explorer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
