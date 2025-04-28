@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #401F3E;
+    color: #401F3E;
+}
+
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    font-size: 50px;
+    color: #E0FFFF;
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.search-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3F2E56;
+    color: #FAF2A1;
+    outline: none;
+}
+
+input::placeholder {
+    color: #759AAB;
+}
+
+select {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3F2E56;
+    color: #FAF2A1;
+    outline: none;
+}
+
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;  /* Added gap to prevent shrinkage */
+}
+
+.no-results {
+    font-size: 24px;
+    color: #FAF2A1;
+}
+
+/* pokemon card */
+.pokemon-card {
+    background-color: #E6E6FA;
+    border-radius: 16px;
+    margin: 15px;
+    padding: 20px;
+    width: 210px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    z-index: 0;
+    overflow: hidden;  
+    box-sizing: border-box; 
+}
+
+/* pokemon card hover*/
+
+.pokemon-card:hover {
+    transform: scale(1.05); 
+    border: 2px solid #759AAB;
+    box-shadow: 0 0 15px rgba(117, 154, 171, 0.5);
+    z-index: 1;  /* ensures hovered card is above others */
+    position: relative; 
+}
+/* image */
+.pokemon-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.pokemon-card h3 {
+    font-size: 20px;
+    color: #FAF2A1;
+    margin-bottom: 10px;
+}
+
+.pokemon-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #401F3E;
+}
+/* footer */
+
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #D3D3D3;
+}
+
+.footer-name {
+    font-size: 20px;
+    color: #3F2E56;
+}
+
+.footer-name .spotlight {
+    color: #3F2E56;
+    font-weight: bold;
+    text-shadow: 0 0 10px #759AAB;
+}
+
+.github-icon {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #3F2E56;
+}
+
+.mini-projects {
+    margin-top: 10px;
+}
+
+.mini-projects a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 14px;
+    color: #3F2E56;
+    text-decoration: none;
+}
+
+.mini-projects a:hover {
+    text-decoration: underline;
+    color: #6A5ACD;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header {
+        font-size: 40px;
+    }
+    .pokemon-card {
+        width: 180px;
+        height: 250px;
+        margin: 10px;
+    }
+    .pokemon-card img {
+        width: 120px;
+        height: 120px;
+    }
+    input[type="text"], select {
+        width: 200px;
+    }
+    .footer-name {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        font-size: 32px;
+    }
+    .pokemon-card {
+        width: 150px;
+        height: 230px;
+        margin: 8px;
+    }
+    .pokemon-card img {
+        width: 100px;
+        height: 100px;
+    }
+    input[type="text"], select {
+        width: 180px;
+    }
+    .footer-name {
+        font-size: 16px;
+    }
+    .footer {
+        padding: 15px;
+    }
+}
+
+.pokemon-details {
+    text-align: center;
+    margin: 20px;
+}
+
+.pokemon-details-name {
+    font-size: 32px;
+    color: #E0FFFF;
+}
+
+.pokemon-details-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.pokemon-details-info {
+    font-size: 18px;
+    color: #FAF2A1;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #3F2E56;
+    color: #FAF2A1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #759AAB;
+}
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
